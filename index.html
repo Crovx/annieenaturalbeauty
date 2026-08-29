@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Annie Natural Beauty | Santuario de Bienestar & Estética en Torreón</title>
+  <meta name="description" content="Masajes relajantes, tratamientos faciales, hidrocolonoscopia, cavitación, radiofrecuencia y mesoterapia en Torreón. Más de 10 años cuidando de tu bienestar y belleza.">
+
+  <!-- Google Fonts: Playfair Display & DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..800;1,9..40,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  
+  <!-- Material Symbols Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN with plugins -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            surface: "#fff8f8",
+            "surface-dim": "#f2d1de",
+            "surface-bright": "#fff8f8",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#fff0f4",
+            "surface-container": "#ffe8f0",
+            "surface-container-high": "#ffe0ec",
+            "surface-container-highest": "#fbdae7",
+            "on-surface": "#28161f",
+            "on-surface-variant": "#4c444b",
+            "inverse-surface": "#3f2a34",
+            "inverse-on-surface": "#ffecf2",
+            outline: "#7e747b",
+            "outline-variant": "#cfc3cb",
+            "surface-tint": "#745474",
+            primary: "#745474",
+            "primary-hover": "#5e425e",
+            "on-primary": "#ffffff",
+            "primary-container": "#ffdbfc",
+            "on-primary-container": "#7c5c7d",
+            "inverse-primary": "#e1bae0",
+            "primary-fixed": "#ffd6fd",
+            "primary-fixed-dim": "#e1bae0",
+            "on-primary-fixed": "#2b112e",
+            "on-primary-fixed-variant": "#5a3c5c",
+            secondary: "#5d5f5f",
+            "on-secondary": "#ffffff",
+            "secondary-container": "#dfe0e0",
+            "on-secondary-container": "#616363",
+            "secondary-fixed": "#e2e2e2",
+            "secondary-fixed-dim": "#c6c6c7",
+            tertiary: "#675e41",
+            "on-tertiary": "#ffffff",
+            "tertiary-container": "#f3e5c0",
+            "on-tertiary-container": "#706648",
+            "tertiary-fixed": "#f0e2bd",
+            "tertiary-fixed-dim": "#d3c6a2",
+            "on-tertiary-fixed": "#221b05",
+            "on-tertiary-fixed-variant": "#4f462b",
+            background: "#fff8f8",
+            "on-background": "#28161f",
+            error: "#ba1a1a",
+            "error-container": "#ffdad6",
+            "on-error-container": "#93000a"
+          },
+          fontFamily: {
+            display: ["'Playfair Display'", "serif"],
+            headline: ["'Playfair Display'", "serif"],
+            body: ["'DM Sans'", "sans-serif"],
+            label: ["'DM Sans'", "sans-serif"]
+          },
+          spacing: {
+            unit: "8px",
+            "container-max": "1280px",
+            gutter: "24px",
+            "margin-mobile": "20px",
+            "stack-lg": "80px",
+            "stack-md": "48px",
+            "stack-sm": "24px"
+          },
+          boxShadow: {
+            'glass': '0 8px 32px 0 rgba(116, 84, 116, 0.08)',
+            'glass-hover': '0 14px 40px 0 rgba(116, 84, 116, 0.14)',
+            'gold-glow': '0 0 25px rgba(240, 226, 189, 0.4)',
+            'orchid-glow': '0 8px 25px rgba(116, 84, 116, 0.25)'
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Font styling shortcuts */
+    .font-serif-luxury {
+      font-family: 'Playfair Display', serif;
+    }
+    .font-sans-clean {
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    /* Scroll animations */
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .fade-in-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Glassmorphic elements */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(251, 218, 231, 0.6);
+    }
+
+    .glass-nav {
+      background: rgba(255, 248, 248, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #fff8f8;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #e1bae0;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #745474;
+    }
+
+    /* Parallax & image zoom */
+    .img-zoom-container {
+      overflow: hidden;
+    }
+    .img-zoom-container img {
+      transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    .img-zoom-container:hover img {
+      transform: scale(1.06);
+    }
+
+    /* Custom details accordion animation */
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+    details[open] summary .accordion-chevron {
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+
+<body class="bg-background text-on-background font-sans-clean antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+
+  <!-- ========================================================================= -->
+  <!-- 1. STICKY TOP NAVIGATION BAR                                               -->
+  <!-- ========================================================================= -->
+  <header id="main-header" class="fixed top-0 w-full z-50 glass-nav border-b border-outline-variant/30 transition-all duration-300">
+    <div class="flex justify-between items-center px-margin-mobile md:px-gutter max-w-container-max mx-auto h-20">
+      
+      <!-- Brand Logo -->
+      <a href="#inicio" class="flex items-center gap-2.5 group">
+        <span class="material-symbols-outlined text-primary text-[32px] group-hover:rotate-12 transition-transform duration-300">spa</span>
+        <span class="font-serif-luxury text-[26px] font-semibold tracking-tight text-primary italic">Annie Natural Beauty</span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-7">
+        <a class="nav-link text-[13px] uppercase font-bold tracking-wider text-primary hover:text-tertiary transition-colors duration-200" href="#inicio">Inicio</a>
+        <a class="nav-link text-[13px] uppercase font-semibold tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-200" href="#tratamientos">Tratamientos</a>
+        <a class="nav-link text-[13px] uppercase font-semibold tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-200" href="#nosotros">Nosotros</a>
+        <a class="nav-link text-[13px] uppercase font-semibold tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-200" href="#faq">FAQ</a>
+        <a class="nav-link text-[13px] uppercase font-semibold tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-200" href="#contacto">Contacto</a>
+      </nav>
+
+      <!-- Desktop CTA Button -->
+      <div class="hidden md:flex items-center gap-3">
+        <a href="#contacto" class="inline-flex items-center gap-2 bg-primary text-on-primary text-[13px] uppercase tracking-wider font-bold px-6 py-3 rounded-full hover:bg-primary-hover shadow-orchid-glow hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5">
+          <span class="material-symbols-outlined text-[18px]">calendar_month</span>
+          Reservar cita
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button class="md:hidden text-primary p-2 focus:outline-none rounded-lg hover:bg-surface-container" id="mobile-menu-btn" aria-label="Abrir menú de navegación">
+        <span class="material-symbols-outlined text-[30px]" id="menu-icon">menu</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- MOBILE NAVIGATION DRAWER                                                  -->
+  <!-- ========================================================================= -->
+  <div id="mobile-drawer" class="fixed inset-y-0 left-0 z-[60] flex flex-col h-full w-80 max-w-[85vw] bg-surface shadow-2xl transition-transform transform -translate-x-full duration-300 ease-in-out md:hidden border-r border-outline-variant/30">
+    <div class="p-6 border-b border-outline-variant/20 flex justify-between items-center bg-surface-container-low">
+      <div class="flex items-center gap-2">
+        <span class="material-symbols-outlined text-primary text-[28px]">spa</span>
+        <span class="font-serif-luxury text-[22px] font-semibold text-primary italic">Annie Natural Beauty</span>
+      </div>
+      <button class="text-on-surface-variant hover:text-primary p-1 rounded-full hover:bg-surface-container-highest" id="close-drawer-btn" aria-label="Cerrar menú">
+        <span class="material-symbols-outlined text-[24px]">close</span>
+      </button>
+    </div>
+    <nav class="flex-1 py-6 px-4 flex flex-col gap-2 overflow-y-auto">
+      <a class="drawer-link flex items-center gap-4 bg-primary-container text-on-primary-container rounded-full px-5 py-3.5 text-[14px] font-bold uppercase tracking-wider transition-all" href="#inicio">
+        <span class="material-symbols-outlined text-[20px]">home</span>
+        Inicio
+      </a>
+      <a class="drawer-link flex items-center gap-4 text-on-surface-variant hover:bg-surface-container-high rounded-full px-5 py-3.5 text-[14px] font-semibold uppercase tracking-wider transition-all" href="#tratamientos">
+        <span class="material-symbols-outlined text-[20px]">spa</span>
+        Tratamientos
+      </a>
+      <a class="drawer-link flex items-center gap-4 text-on-surface-variant hover:bg-surface-container-high rounded-full px-5 py-3.5 text-[14px] font-semibold uppercase tracking-wider transition-all" href="#nosotros">
+        <span class="material-symbols-outlined text-[20px]">verified</span>
+        Sobre Nosotros
+      </a>
+      <a class="drawer-link flex items-center gap-4 text-on-surface-variant hover:bg-surface-container-high rounded-full px-5 py-3.5 text-[14px] font-semibold uppercase tracking-wider transition-all" href="#faq">
+        <span class="material-symbols-outlined text-[20px]">help</span>
+        Preguntas Frecuentes
+      </a>
+      <a class="drawer-link flex items-center gap-4 text-on-surface-variant hover:bg-surface-container-high rounded-full px-5 py-3.5 text-[14px] font-semibold uppercase tracking-wider transition-all" href="#contacto">
+        <span class="material-symbols-outlined text-[20px]">chat</span>
+        Contacto y Ubicación
+      </a>
+    </nav>
+    <div class="p-6 border-t border-outline-variant/20 bg-surface-container-low">
+      <a href="#contacto" class="drawer-link flex items-center justify-center gap-2 w-full bg-primary text-on-primary py-3.5 rounded-full font-bold uppercase text-[13px] tracking-wider shadow-md">
+        <span class="material-symbols-outlined text-[18px]">calendar_month</span>
+        Agendar Cita
+      </a>
+      <p class="text-center text-[11px] text-on-surface-variant/70 mt-3">Plaza TGS, Ampliación Senderos • Tel: <a href="tel:+528717438686" class="hover:underline font-semibold text-primary">(871) 743-8686</a></p>
+    </div>
+  </div>
+
+  <!-- Mobile Drawer Overlay -->
+  <div id="drawer-overlay" class="fixed inset-0 bg-on-surface/50 z-[55] hidden md:hidden backdrop-blur-sm transition-opacity opacity-0 duration-300"></div>
+
+  <!-- ========================================================================= -->
+  <!-- MAIN CONTENT                                                              -->
+  <!-- ========================================================================= -->
+  <main class="pt-20">
+
+    <!-- 2. HERO SECTION -->
+    <section id="inicio" class="relative min-h-[820px] lg:min-h-[880px] flex items-center justify-center overflow-hidden">
+      <!-- Hero Background Image & Gradient Blur Overlays -->
+      <div class="absolute inset-0 z-0">
+        <div class="w-full h-full bg-cover bg-center bg-no-repeat scale-105 transition-transform duration-1000" 
+             style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDc8rm2EtDEOR44_IhDDd6GG01ktK5n5re23Ci-z6Vk1NGn4t5OlPTDlDHzwnaq2VTc0zXqu_56gEHh76MaX2r7C9FYeX0s0WqlG-TIs0znF7mQF2u7xOxRiYGX_4kQFdoi1po2DqMwt2jWFCeWDuJ7xBFttNmwb7bdYybQWniZi1sSBl4wtb8vJ8CadXkhHPm3-MhNiBx1ycEY46PKD1Y-5TMBQJcZBItR1hSbRKt3TzxPtROs4_kR');">
+        </div>
+        <!-- Ethereal Luminescence layered tints -->
+        <div class="absolute inset-0 bg-gradient-to-b from-surface/85 via-surface/60 to-surface/95 backdrop-blur-[2px]"></div>
+        <div class="absolute inset-0 bg-radial from-transparent via-surface/30 to-surface/90"></div>
+      </div>
+
+      <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-gutter text-center py-20 fade-in-up visible">
+        
+        <!-- Tagline badge -->
+        <div class="inline-flex items-center gap-2 bg-white/80 border border-primary-fixed-dim px-4 py-1.5 rounded-full mb-6 shadow-sm backdrop-blur-md">
+          <span class="material-symbols-outlined text-primary text-[16px]">local_florist</span>
+          <span class="text-[12px] font-bold uppercase tracking-widest text-primary">Santuario de Bienestar en Torreón</span>
+        </div>
+
+        <h1 class="font-serif-luxury text-[38px] sm:text-[46px] md:text-[56px] lg:text-[64px] leading-[1.12] font-semibold text-primary max-w-3xl mx-auto mb-6 tracking-tight">
+          Mereces un descanso de verdad
+        </h1>
+
+        <p class="text-[17px] sm:text-[19px] text-on-surface-variant max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+          Masajes, faciales y tratamientos de bienestar en Torreón. Más de 10 años dedicados a armonizar tu cuerpo, mente y piel.
+        </p>
+
+        <!-- CTA Action Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
+          <a href="#contacto" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-primary text-on-primary text-[13px] uppercase font-bold tracking-wider px-9 py-4 rounded-full hover:bg-primary-hover shadow-orchid-glow hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5">
+            Reservar ahora
+            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+          </a>
+          <a href="#tratamientos" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 border-2 border-primary/50 text-primary hover:border-primary text-[13px] uppercase font-bold tracking-wider px-8 py-4 rounded-full bg-white/50 hover:bg-white backdrop-blur-sm transition-all duration-300">
+            Ver servicios
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Subtle Floating Scroll Indicator -->
+      <a href="#tratamientos" class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center text-primary/75 hover:text-primary transition-colors animate-bounce">
+        <span class="text-[11px] font-bold uppercase tracking-widest mb-1">DESCUBRE</span>
+        <span class="material-symbols-outlined text-[24px]">keyboard_arrow_down</span>
+      </a>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 3. TRUST BAND (STATS & CREDENTIALS)                                       -->
+    <!-- ========================================================================= -->
+    <section class="bg-primary text-on-primary py-14 relative z-20 shadow-xl border-y border-white/10">
+      <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-6 text-center">
+          
+          <div class="flex flex-col items-center gap-2.5 fade-in-up visible">
+            <div class="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center mb-1">
+              <span class="material-symbols-outlined text-[30px] text-tertiary-fixed">verified</span>
+            </div>
+            <h3 class="font-serif-luxury text-[26px] md:text-[30px] font-semibold text-white">10 años</h3>
+            <p class="text-[12px] opacity-85 uppercase tracking-widest font-medium">de experiencia</p>
+          </div>
+
+          <div class="flex flex-col items-center gap-2.5 fade-in-up visible" style="transition-delay: 100ms;">
+            <div class="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center mb-1">
+              <span class="material-symbols-outlined text-[30px] text-tertiary-fixed">favorite</span>
+            </div>
+            <h3 class="font-serif-luxury text-[26px] md:text-[30px] font-semibold text-white">+5,000</h3>
+            <p class="text-[12px] opacity-85 uppercase tracking-widest font-medium">clientes satisfechos</p>
+          </div>
+
+          <div class="flex flex-col items-center gap-2.5 fade-in-up visible" style="transition-delay: 200ms;">
+            <div class="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center mb-1">
+              <span class="material-symbols-outlined text-[30px] text-tertiary-fixed">badge</span>
+            </div>
+            <h3 class="font-serif-luxury text-[26px] md:text-[30px] font-semibold text-white">Equipo</h3>
+            <p class="text-[12px] opacity-85 uppercase tracking-widest font-medium">certificado</p>
+          </div>
+
+          <div class="flex flex-col items-center gap-2.5 fade-in-up visible" style="transition-delay: 300ms;">
+            <div class="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center mb-1">
+              <span class="material-symbols-outlined text-[30px] text-tertiary-fixed">self_improvement</span>
+            </div>
+            <h3 class="font-serif-luxury text-[26px] md:text-[30px] font-semibold text-white">Atención</h3>
+            <p class="text-[12px] opacity-85 uppercase tracking-widest font-medium">personalizada</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 4. SERVICES & TREATMENTS SECTION                                          -->
+    <!-- ========================================================================= -->
+    <section class="py-20 lg:py-28 bg-background relative" id="tratamientos">
+      <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+        
+        <!-- Section Heading -->
+        <div class="text-center mb-12 fade-in-up visible">
+          <span class="text-[12px] font-bold tracking-widest uppercase text-tertiary">Experiencias Holísticas & Aparatología</span>
+          <h2 class="font-serif-luxury text-[32px] sm:text-[40px] md:text-[44px] text-primary mt-2 mb-4 font-semibold">
+            Nuestros tratamientos
+          </h2>
+          <div class="h-0.5 w-24 bg-tertiary-fixed-dim mx-auto rounded-full"></div>
+          <p class="text-on-surface-variant text-[16px] max-w-xl mx-auto mt-4 font-light">
+            Protocolos especializados diseñados para revitalizar tu figura, cutis y equilibrio interior.
+          </p>
+
+          <!-- Interactive Category Filter Chips -->
+          <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-8" id="filter-chips">
+            <button data-filter="all" class="filter-btn active bg-primary text-white text-[12px] font-bold uppercase tracking-wider px-5 py-2 rounded-full transition-all duration-200 shadow-sm">
+              Todos (8)
+            </button>
+            <button data-filter="cuerpo" class="filter-btn bg-surface-container text-on-surface-variant hover:bg-surface-container-high text-[12px] font-bold uppercase tracking-wider px-5 py-2 rounded-full transition-all duration-200">
+              Cuerpo
+            </button>
+            <button data-filter="rostro" class="filter-btn bg-surface-container text-on-surface-variant hover:bg-surface-container-high text-[12px] font-bold uppercase tracking-wider px-5 py-2 rounded-full transition-all duration-200">
+              Rostro
+            </button>
+            <button data-filter="bienestar" class="filter-btn bg-surface-container text-on-surface-variant hover:bg-surface-container-high text-[12px] font-bold uppercase tracking-wider px-5 py-2 rounded-full transition-all duration-200">
+              Bienestar
+            </button>
+          </div>
+        </div>
+
+        <!-- 8 Services Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-7" id="services-grid">
+
+          <!-- Card 1: Masajes -->
+          <div class="service-card bg-surface-container-lowest rounded-2xl overflow-hidden shadow-glass hover:shadow-glass-hover transition-all duration-300 fade-in-up flex flex-col h-full group border border-outline-variant/20 hover:-translate-y-1 visible" data-category="cuerpo">
+            <div class="h-60 overflow-hidden relative img-zoom-container">
+              <img class="w-full h-full object-cover" alt="Masajes relajantes y terapéuticos en Torreón" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ_i6Mm5lNmunto1-XBJlKnWk4arSHcl0okJGbMlsN-zhyw_i2MJa5CBLNRVPPOmlB5PN4loCl-hyECQkC92-MG9_wE5XJ1KPzWKjxz64A34RhbXcTZOAyVK_33UQYvgrdPM3TmA0LQyU6IVRgmq8JY8Aau1JpUrFDaBAhTaB8CInVYF46zcimKAJJAn92uvWyF_IZG-fjwYnsoULoBB3iUV9lF3g3YWClVtDMnNeVaaz_qDeLK4P7GDWqYMp3dbvzOm6t-C563OOtrg">
+              <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-md text-primary font-bold text-[11px] px-3 py-1 rounded-full shadow-sm">
+                60 / 90 min
+              </div>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <div class="bg-surface-container px-3 py-1 rounded-full w-fit mb-3">
+                <span class="text-[11px] font-bold text-primary uppercase tracking-wider">Cuerpo</span>
+              </div>
+              <h3 class="font-serif-luxury text-[20px] font-semibold text-primary mb-2.5 group-hover:text-tertiary transition-colors">
+                Masajes relajantes y terapéuticos
+              </h3>
+              <p class="text-[14px] text-on-surface-variant mb-6 flex-1 leading-relaxed">
+                Sesiones personalizadas con aromaterapia para liberar tensión muscular profunda, reducir el estrés y activar la circulación.
+              </p>
+              <button onclick="openTreatmentModal('masajes')" class="w-full py-2.5 px-4 rounded-xl border border-primary/40 hover:bg-primary hover:text-white text-primary font-bold text-[12px] uppercase tracking-wider transition-all duration-200 flex items-center justify-center gap-2 group/btn">
+                Ver detalles
+                <span class="material-symbols-outlined text-[16px] group-hover/btn:translate-x-1 transition-transform">arrow_right_alt</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 2: Faciales -->
+          <div class="service-card bg-surface-container-lowest rounded-2xl overflow-hidden shadow-glass hover:shadow-glass-hover transition-all duration-300 fade-in-up flex flex-col h-full group border border-outline-variant/20 hover:-translate-y-1 visible" data-category="rostro" style="transition-delay: 100ms;">
+            <div class="h-60 overflow-hidden relative img-zoom-container">
+              <img class="w-full h-full object-cover" alt="Tratamientos faciales rejuvenecedores en Torreón" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkI7SN_PXZwEgSMnLYz5h8SWLFbszWuJysh1qGTEJvYFxAFzNoMZctb_HOJOJGEawzXoeP7Bs066RQiJijAPl2ocBbZM8Q_XNxHedMLfk7jyvjRrn3z65Eg-2BLEBM1NKSxAIHofgIg1bpsxSyKK66fbSlsvWo6KuAa1_KxZWPU68ejejb7DKzhygFpCZWMOAzAKoGGJZqxd6VPTdwJpbWCvbqXOrr2r5yuR0wCoDSG0WD7D59FvFfpawhfpE_ikVKb2Mq_cZJ05jZUA">
+              <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-md text-primary font-bold text-[11px] px-3 py-1 rounded-full shadow-sm">
+                60 min
+              </div>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <div class="bg-surface-container px-3 py-1 rounded-full w-fit mb-3">
+                <span class="text-[11px] font-bold text-primary uppercase tracking-wider">Rostro</span>
+              </div>
+              <h3 class="font-serif-luxury text-[20px] font-semibold text-primary mb-2.5 group-hover:text-tertiary transition-colors">
+                Tratamientos faciales
+              </h3>
+              <p class="text-[14px] text-on-surface-variant mb-6 flex-1 leading-relaxed">
+                Limpieza profunda, hidro-nutrición y bio-regeneración celular adaptados minuciosamente a las necesidades de tu tipo de piel.
+              </p>
+              <button onclick="openTreatmentModal('faciales')" class="w-full py-2.5 px-4 rounded-xl border border-primary/40 hover:bg-primary hover:text-white text-primary font-bold text-[12px] uppercase tracking-wider transition-all duration-200 flex items-center justify-center gap-2 group/btn">
+                Ver detalles
+                <span class="material-symbols-outlined text-[16px] group-hover/btn:translate-x-1 transition-transform">arrow_right_alt</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 3: Hidrocolonoscopia -->
+          <div class="service-card bg-surface-container-lowest rounded-2xl overflow-hidden shadow-glass hover:shadow-glass-hover transition-all duration-300 fade-in-up flex flex-col h-full group border border-outline-variant/20 hover:-translate-y-1 visible" data-category="bienestar" style="transition-delay: 200ms;">
+            <div class="h-60 overflow-hidden relative img-zoom-container">
+              <img class="w-full h-full object-cover" alt="Hidroterapia de colon en Torreón" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNwTStQgBZgWMJRiPySFHnSjqR6eSEYk9lCW9bD4MkUeGE9mZG2Rb2B7RiXEAfcfG8LHUxj5UhKz2-FdqhQxIqXJstIIxhOoDCDgDyHml6hi_7n7453ZnsCtumSfrtKn4YRGj8XQwKJuK21bKIgqA_pVaOXfS4UBVq22DMW5W7HtjiVqD1NcZP3PLEviRR60N8EUWpiHRes4ZmMEhG_s1F3IUR4gP-uCPJyKmiBd5AXhHXQFdq82TLbfRfcnjx-8DOJwzv_gIdYOrVjw">
+              <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-md text-primary font-bold text-[11px] px-3 py-1 rounded-full shadow-sm">
+                45 min
+              </div>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <div class="bg-surface-container px-3 py-1 rounded-full w-fit mb-3">
+                <span class="text-[11px] font-bold text-primary uppercase tracking-wider">Bienestar</span>
+              </div>
+              <h3 class="font-serif-luxury text-[20px] font-semibold text-primary mb-2.5 group-hover:text-tertiary transition-colors">
+                Hidrocolonoscopia
+              </h3>
+              <p class="text-[14px] text-on-surface-variant mb-6 flex-1 leading-relaxed">
+                Higiene intestinal profunda con agua purificada ozonizada. Optimiza la digestión, depura toxinas y renueva tu energía vital.
+              </p>
+              <button onclick="openTreatmentModal('hidrocolonoscopia')" class="w-full py-2.5 px-4 rounded-xl border border-primary/40 hover:bg-primary hover:text-white text-primary font-bold text-[12px] uppercase tracking-wider transition-all duration-200 flex items-center justify-center gap-2 group/btn">
+                Ver detalles
+                <span class="material-symbols-outlined text-[16px] group-hover/btn:translate-x-1 transition-transform">arrow_right_alt</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 4: Enzimas -->
+          <div class="service-card bg-surface-container-lowest rounded-2xl overflow-hidden shadow-glass hover:shadow-glass-hover transition-all duration-300 fade-in-up flex flex-col h-full group border border-outline-variant/20 hover:-translate-y-1 visible" data-category="cuerpo" style="transition-delay: 300ms;">
+            <div class="h-60 overflow-hidden relative img-zoom-container">
+              <img class="w-full h-full object-cover" alt="Tratamiento reductor con enzimas recombinantes en Torreón" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1-jMqVKmTpQVHy0Cdoz7Wdq_OctXMX2KkHoisD0pSBUjFyHA6bcKiaoNAuU2dIjoY4O2gbAJxUeVEZTl63hl2Br9Y86xemwnAlHASVZJebLLHpFXneV9BLYWZzYc-PY7FarcYAUPeOh8GEr_NYQdESSy5ZVRKLPtOL2gn6iEX-mOj-h0CwbetcqQsCy6tMbUu-qg8jXvUyg0AmtCJTx8CxsusaFacV68GwRDZZfq_2x6bAls8SEGSZvjmPKXt6xTJb5HCy4XZGExL3A">
+              <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-md text-primary font-bold text-[11px] px-3 py-1 rounded-full shadow-sm">
+                45 min
+              </div>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <div class="bg-surface-container px-3 py-1 rounded-full w-fit mb-3">
+                <span class="text-[11px] font-bold text-primary uppercase tracking-wider">Cuerpo</span>
+              </div>
+              <h3 class="font-serif-luxury text-[20px] font-semibold text-primary mb-2.5 group-hover:text-tertiary transition-colors">
+                Enzimas
+              </h3>
+              <p class="text-[14px] text-on-surface-variant mb-6 flex-1 leading-relaxed">
+                Complejo enzimático natural que disuelve acúmulos grasos rebeldes, alisa celulitis y reafirma tejidos de manera visible.
+              </p>
+              <button onclick="openTreatmentModal('enzimas')" class="w-full py-2.5 px-4 rounded-xl border border-primary/40 hover:bg-primary hover:text-white text-primary font-bold text-[12px] uppercase tracking-wider transition-all duration-200 flex items-center justify-center gap-2 group/btn">
+                Ver detalles
+                <span class="material-symbols-outlined text-[16px] group-hover/btn:translate-x-1 transition-transform">arrow_right_alt</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 5: Gimnasia pasiva -->
+          <div class="service-card bg-surface-container-lowest rounded-2xl overflow-hidden shadow-glass hover:shadow-glass-hover transition-all duration-300 fade-in-up flex flex-col h-full group border border-outline-variant/20 hover:-translate-y-1 visible" data-category="cuerpo" style="transition-delay: 100ms;">
+            <div class="h-60 overflow-hidden relative img-zoom-container">
+              <img class="w-full h-full object-cover" alt="Electroestimulación y gimnasia pasiva en Torreón" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRVp2JNbO5IlTEqffnEjPbPthFq-MD5XOIfDAtiE_KnusJcqRF7PYi-LI3vwDF7oPoRILRZ1xqliyfl8Da_MafbQ0oZoU84UeG6rl0jNDk4pVL2YzSV4b32LE2rWf-Blze0KSPrhw6EAz2Cgb3yntwaDldmtdKeWyoUurt_oVYyS3nv2csdGrLJe5PL3Ibdk05_cZJFopu8m9Nko-mBEkTNAz2BpAVhCiJ6juLn88G4cdTQR1gUfBOsDFUh9OfJE0vAekgP0Q5UnIPaw">
+              <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-md text-primary font-bold text-[11px] px-3 py-1 rounded-full shadow-sm">
+                45 min
+              </div>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <div class="bg-surface-container px-3 py-1 rounded-full w-fit mb-3">
+                <span class="text-[11px] font-bold text-primary uppercase tracking-wider">Cuerpo</span>
+              </div>
+              <h3 class="font-serif-luxury text-[20px] font-semibold text-primary mb-2.5 group-hover:text-tertiary transition-colors">
+                Gimnasia pasiva
+              </h3>
+              <p class="text-[14px] text-on-surface-variant mb-6 flex-1 leading-relaxed">
+                Electroestimulación neuromuscular que fortalece, tonifica y levanta glúteos y abdomen sin sobrecargar articulaciones.
+              </p>
+              <button onclick="openTreatmentModal('gimnasia')" class="w-full py-2.5 px-4 rounded-xl border border-primary/40 hover:bg-primary hover:text-white text-primary font-bold text-[12px] uppercase tracking-wider transition-all duration-200 flex items-center justify-center gap-2 group/btn">
+                Ver detalles
+                <span class="material-symbols-outlined text-[16px] group-hover/btn:translate-x-1 transition-transform">arrow_right_alt</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 6: Mesoterapia -->
+          <div class="service-card bg-surface-container-lowest rounded-2xl overflow-hidden shadow-glass hover:shadow-glass-hover transition-all duration-300 fade-in-up flex flex-col h-full group border border-outline-variant/20 hover:-translate-y-1 visible" data-category="cuerpo rostro" style="transition-delay: 200ms;">
+            <div class="h-60 overflow-hidden relative img-zoom-container">
+              <img class="w-full h-full object-cover" alt="Mesoterapia corporal y facial en Torreón" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMhHSXLRW1iSHdDrBIFF01h8Xj9j9MhN83ylzn8AwRCp1T72ZoFl1-gD4xX7b0rPZ6hzniPDtZ3buDUkAhyQKvRL_Fv2eOXaaSDJZsg7sUEo5tGTTGhlb-OJ21UrzLlwduJuW30ytYPHIRDvFAxl0-KJakLCkmqR8Fz7WA1I8QWrRhfj6ZeyJn5-I7_uoPaxTEMvuKOJeZocLzESHgB_OjARZvZZFCocdTYBnAeFcsmerSwWgwzEDzhyEUeXhHICFwdTiYtK3P30UWBw">
+              <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-md text-primary font-bold text-[11px] px-3 py-1 rounded-full shadow-sm">
+                40 min
+              </div>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <div class="bg-surface-container px-3 py-1 rounded-full w-fit mb-3">
+                <span class="text-[11px] font-bold text-primary uppercase tracking-wider">Cuerpo / Rostro</span>
+              </div>
+              <h3 class="font-serif-luxury text-[20px] font-semibold text-primary mb-2.5 group-hover:text-tertiary transition-colors">
+                Mesoterapia
+              </h3>
+              <p class="text-[14px] text-on-surface-variant mb-6 flex-1 leading-relaxed">
+                Nutrición intradérmica con coctel de aminoácidos, vitaminas y principios lipolíticos que regeneran la piel y reducen tallas.
+              </p>
+              <button onclick="openTreatmentModal('mesoterapia')" class="w-full py-2.5 px-4 rounded-xl border border-primary/40 hover:bg-primary hover:text-white text-primary font-bold text-[12px] uppercase tracking-wider transition-all duration-200 flex items-center justify-center gap-2 group/btn">
+                Ver detalles
+                <span class="material-symbols-outlined text-[16px] group-hover/btn:translate-x-1 transition-transform">arrow_right_alt</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 7: Cavitación -->
+          <div class="service-card bg-surface-container-lowest rounded-2xl overflow-hidden shadow-glass hover:shadow-glass-hover transition-all duration-300 fade-in-up flex flex-col h-full group border border-outline-variant/20 hover:-translate-y-1 visible" data-category="cuerpo" style="transition-delay: 300ms;">
+            <div class="h-60 overflow-hidden relative img-zoom-container">
+              <img class="w-full h-full object-cover" alt="Ultracavitación reductora en Torreón" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAljxaEBsClJFKCMO3VUGwRB_6xkiYAcyptw1u6iPRoXJv_lQ8QVk9g8mk8pFA3CRfk9AycCriujjlqyBb90ouDAqbRDfCfiQkO9P9j_MKDJjwgs-C2NhwqvfUoqmmmHTYOxo9mUvyoikGUbEcMQlKueJCQPpoFyfOc3jCYc_Jayb4sFoNj8MwPSLV8GGDqfGj1Wxol-Dz0jxGEnYCro6Z0ZldiRzoCJHX1lH4z-_HvWQCDxeL-khAQwYCfvJAlHs8g3XKGTWJRXSGbzg">
+              <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-md text-primary font-bold text-[11px] px-3 py-1 rounded-full shadow-sm">
+                50 min
+              </div>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <div class="bg-surface-container px-3 py-1 rounded-full w-fit mb-3">
+                <span class="text-[11px] font-bold text-primary uppercase tracking-wider">Cuerpo</span>
+              </div>
+              <h3 class="font-serif-luxury text-[20px] font-semibold text-primary mb-2.5 group-hover:text-tertiary transition-colors">
+                Cavitación
+              </h3>
+              <p class="text-[14px] text-on-surface-variant mb-6 flex-1 leading-relaxed">
+                Ondas ultrasónicas que implosionan células adiposas de manera no invasiva, esculpiendo abdomen, flancos y piernas.
+              </p>
+              <button onclick="openTreatmentModal('cavitacion')" class="w-full py-2.5 px-4 rounded-xl border border-primary/40 hover:bg-primary hover:text-white text-primary font-bold text-[12px] uppercase tracking-wider transition-all duration-200 flex items-center justify-center gap-2 group/btn">
+                Ver detalles
+                <span class="material-symbols-outlined text-[16px] group-hover/btn:translate-x-1 transition-transform">arrow_right_alt</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 8: Radiofrecuencia -->
+          <div class="service-card bg-surface-container-lowest rounded-2xl overflow-hidden shadow-glass hover:shadow-glass-hover transition-all duration-300 fade-in-up flex flex-col h-full group border border-outline-variant/20 hover:-translate-y-1 visible" data-category="cuerpo rostro" style="transition-delay: 400ms;">
+            <div class="h-60 overflow-hidden relative img-zoom-container">
+              <img class="w-full h-full object-cover" alt="Radiofrecuencia reafirmante y lifting en Torreón" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaxO59zz1v4TMw_OlWXG7j-7Zt110XICnPZS6tCIKRb5ESxwsp-nclegrwyeQkV-rWsbZoAJoQSqhRREBvMsDQH_xefnACuJjVdlb83uBl9-Cse-Coxi2dD3AVwkOIFJquuGHidgUwM90bfErt11s_KUY3iV0q9_jLfVIUN666xHSMLsGZ33COSQOBjK2PlH2_KKHaG275gXjsv9soWz9fcsadAziitcJx6AJ28xKES-5uGsTPtTFRhbvvF079vDELkN5Yz_toTzA6CA">
+              <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-md text-primary font-bold text-[11px] px-3 py-1 rounded-full shadow-sm">
+                50 min
+              </div>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <div class="bg-surface-container px-3 py-1 rounded-full w-fit mb-3">
+                <span class="text-[11px] font-bold text-primary uppercase tracking-wider">Cuerpo / Rostro</span>
+              </div>
+              <h3 class="font-serif-luxury text-[20px] font-semibold text-primary mb-2.5 group-hover:text-tertiary transition-colors">
+                Radiofrecuencia
+              </h3>
+              <p class="text-[14px] text-on-surface-variant mb-6 flex-1 leading-relaxed">
+                Emisión de calor controlado que estimula la síntesis de colágeno y elastina, tensando la piel y combatiendo la flacidez.
+              </p>
+              <button onclick="openTreatmentModal('radiofrecuencia')" class="w-full py-2.5 px-4 rounded-xl border border-primary/40 hover:bg-primary hover:text-white text-primary font-bold text-[12px] uppercase tracking-wider transition-all duration-200 flex items-center justify-center gap-2 group/btn">
+                Ver detalles
+                <span class="material-symbols-outlined text-[16px] group-hover/btn:translate-x-1 transition-transform">arrow_right_alt</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Consultation Banner Call to Action -->
+        <div class="mt-16 text-center fade-in-up visible">
+          <a class="inline-flex items-center gap-2.5 border-2 border-primary text-primary hover:bg-primary hover:text-white text-[13px] uppercase font-bold tracking-wider px-9 py-4 rounded-full transition-all duration-300 hover:shadow-lg" href="#contacto">
+            <span class="material-symbols-outlined text-[20px]">support_agent</span>
+            Contáctanos para asesoría personalizada
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 5. ABOUT US SECTION                                                       -->
+    <!-- ========================================================================= -->
+    <section class="py-20 lg:py-28 bg-surface-container-low border-y border-outline-variant/20 relative" id="nosotros">
+      <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          
+          <!-- Image Column with Decorative Frame -->
+          <div class="fade-in-up relative order-2 lg:order-1 visible">
+            <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl relative z-10 border border-white">
+              <img class="w-full h-full object-cover" alt="Terapeuta profesional preparando cabina de spa en Torreón" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgpAN6mIF6XKiowNDvPoGmWQEOnfmm8SmdLljFLgLBIGhfBguQQ4B8Y7AVaG7GuG83HbD3Xgi8ibhYrFsWD1w3c882EKfEpg5OlLwtKKqUTKmlInm4Tb5Pdm9w4nH-qRd3i3MdGe8f0jlatYZ2nRYO8RRqqlrAqWWaV_sQPyTWWoK_H3I2JoVABr2F-NuScEJkvjcNDmuGh1DngDSElsMciztVrYCpDQ8aRdeOmU_ynDU9K0eQv6Dl">
+            </div>
+            <!-- Decorative Offset Backdrop -->
+            <div class="absolute -bottom-6 -left-6 w-3/4 h-3/4 bg-primary-container/40 rounded-2xl -z-10 hidden sm:block border border-primary/20 backdrop-blur-sm"></div>
+            <div class="absolute -top-6 -right-6 w-24 h-24 bg-tertiary-fixed/60 rounded-full blur-2xl -z-10"></div>
+          </div>
+
+          <!-- Text Column -->
+          <div class="fade-in-up order-1 lg:order-2 visible">
+            <span class="text-[12px] font-bold tracking-widest uppercase text-tertiary">Nuestra Filosofía</span>
+            <h2 class="font-serif-luxury text-[32px] sm:text-[40px] text-primary mb-6 font-semibold leading-tight">
+              10 años cuidando tu bienestar en Torreón
+            </h2>
+            <div class="h-0.5 w-16 bg-tertiary-fixed-dim mb-8 rounded-full"></div>
+            
+            <p class="text-[16px] text-on-surface-variant mb-8 leading-relaxed font-light">
+              En <strong class="text-primary font-semibold">Annie Natural Beauty</strong> creemos firmemente que el cuidado personal y el equilibrio corporal no son un lujo ocasional, sino una necesidad esencial para tu salud integral. Combinamos rigor técnico con la serenidad de un espacio diseñado para renovarte por completo.
+            </p>
+
+            <!-- Value Props List -->
+            <div class="flex flex-col gap-6">
+              
+              <div class="flex items-start gap-4 p-4 rounded-xl bg-white/70 border border-outline-variant/20 shadow-sm">
+                <div class="bg-primary/10 p-3 rounded-full text-primary shrink-0">
+                  <span class="material-symbols-outlined text-[24px]">school</span>
+                </div>
+                <div>
+                  <h4 class="font-serif-luxury text-[18px] font-semibold text-primary mb-1">Profesionalismo certificado</h4>
+                  <p class="text-[14px] text-on-surface-variant leading-relaxed">Terapeutas y cosmetólogas altamente capacitadas con continua actualización en técnicas de vanguardia.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4 p-4 rounded-xl bg-white/70 border border-outline-variant/20 shadow-sm">
+                <div class="bg-primary/10 p-3 rounded-full text-primary shrink-0">
+                  <span class="material-symbols-outlined text-[24px]">eco</span>
+                </div>
+                <div>
+                  <h4 class="font-serif-luxury text-[18px] font-semibold text-primary mb-1">Productos de calidad premium</h4>
+                  <p class="text-[14px] text-on-surface-variant leading-relaxed">Selección rigurosa de aceites esenciales puros, activos botánicos hipoalergénicos y tecnología estética segura.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4 p-4 rounded-xl bg-white/70 border border-outline-variant/20 shadow-sm">
+                <div class="bg-primary/10 p-3 rounded-full text-primary shrink-0">
+                  <span class="material-symbols-outlined text-[24px]">self_improvement</span>
+                </div>
+                <div>
+                  <h4 class="font-serif-luxury text-[18px] font-semibold text-primary mb-1">Ambiente único & sensorial</h4>
+                  <p class="text-[14px] text-on-surface-variant leading-relaxed">Cabinas climatizadas, diseño acústico inmersivo y aromaterapia guiada para reducir tu estrés desde el primer minuto.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 6. FREQUENTLY ASKED QUESTIONS (FAQ)                                       -->
+    <!-- ========================================================================= -->
+    <section class="py-20 lg:py-28 bg-surface-container-lowest relative" id="faq">
+      <div class="max-w-3xl mx-auto px-margin-mobile md:px-gutter">
+        
+        <div class="text-center mb-12 fade-in-up visible">
+          <span class="text-[12px] font-bold tracking-widest uppercase text-tertiary">Resolvemos tus dudas</span>
+          <h2 class="font-serif-luxury text-[32px] sm:text-[40px] text-primary mt-2 mb-4 font-semibold">
+            Preguntas Frecuentes
+          </h2>
+          <div class="h-0.5 w-24 bg-tertiary-fixed-dim mx-auto rounded-full"></div>
+        </div>
+
+        <div class="flex flex-col gap-3.5 fade-in-up visible">
+
+          <details class="bg-surface rounded-xl border border-outline-variant/30 p-5 open:bg-surface-container-low transition-all duration-200 group">
+            <summary class="font-serif-luxury text-[17px] sm:text-[18px] font-medium text-primary cursor-pointer list-none flex justify-between items-center gap-4">
+              <span>¿Cuántas sesiones necesito para ver resultados en cavitación, radiofrecuencia o mesoterapia?</span>
+              <span class="material-symbols-outlined text-primary accordion-chevron transition-transform duration-300 shrink-0">expand_more</span>
+            </summary>
+            <div class="text-[15px] text-on-surface-variant mt-3.5 pt-3 border-t border-outline-variant/20 leading-relaxed font-light">
+              Los cambios en tono de piel y relajación se notan desde la primera cita. Para reducción de medidas y reafirmación estructural, se recomienda un protocolo de 6 a 10 sesiones con intervalo semanal. En tu primera cita realizamos una valoración previa sin costo para diseñar tu plan ideal.
+            </div>
+          </details>
+
+          <details class="bg-surface rounded-xl border border-outline-variant/30 p-5 open:bg-surface-container-low transition-all duration-200 group">
+            <summary class="font-serif-luxury text-[17px] sm:text-[18px] font-medium text-primary cursor-pointer list-none flex justify-between items-center gap-4">
+              <span>¿La hidrocolonoscopia es dolorosa o incómoda?</span>
+              <span class="material-symbols-outlined text-primary accordion-chevron transition-transform duration-300 shrink-0">expand_more</span>
+            </summary>
+            <div class="text-[15px] text-on-surface-variant mt-3.5 pt-3 border-t border-outline-variant/20 leading-relaxed font-light">
+              No es dolorosa. Se trata de un procedimiento suave, higiénico y automatizado donde se regula la temperatura y presión del agua filtrada. Nuestras terapeutas especializadas garantizan tu total privacidad y confort durante todo el proceso.
+            </div>
+          </details>
+
+          <details class="bg-surface rounded-xl border border-outline-variant/30 p-5 open:bg-surface-container-low transition-all duration-200 group">
+            <summary class="font-serif-luxury text-[17px] sm:text-[18px] font-medium text-primary cursor-pointer list-none flex justify-between items-center gap-4">
+              <span>¿Cuáles son los métodos de pago aceptados?</span>
+              <span class="material-symbols-outlined text-primary accordion-chevron transition-transform duration-300 shrink-0">expand_more</span>
+            </summary>
+            <div class="text-[15px] text-on-surface-variant mt-3.5 pt-3 border-t border-outline-variant/20 leading-relaxed font-light">
+              Aceptamos efectivo, tarjetas de débito y crédito (Visa, Mastercard, American Express), transferencias bancarias directas (SPEI) y pagos mediante terminal digital.
+            </div>
+          </details>
+
+          <details class="bg-surface rounded-xl border border-outline-variant/30 p-5 open:bg-surface-container-low transition-all duration-200 group">
+            <summary class="font-serif-luxury text-[17px] sm:text-[18px] font-medium text-primary cursor-pointer list-none flex justify-between items-center gap-4">
+              <span>¿Debo hacer cita previa o puedo llegar directamente?</span>
+              <span class="material-symbols-outlined text-primary accordion-chevron transition-transform duration-300 shrink-0">expand_more</span>
+            </summary>
+            <div class="text-[15px] text-on-surface-variant mt-3.5 pt-3 border-t border-outline-variant/20 leading-relaxed font-light">
+              Trabajamos con agenda previa para asegurarnos de que tu cabina esté perfectamente higienizada, aromatizada y con la terapeuta asignada exclusivamente para ti sin esperas.
+            </div>
+          </details>
+
+          <details class="bg-surface rounded-xl border border-outline-variant/30 p-5 open:bg-surface-container-low transition-all duration-200 group">
+            <summary class="font-serif-luxury text-[17px] sm:text-[18px] font-medium text-primary cursor-pointer list-none flex justify-between items-center gap-4">
+              <span>¿Cuentan con estacionamiento propio?</span>
+              <span class="material-symbols-outlined text-primary accordion-chevron transition-transform duration-300 shrink-0">expand_more</span>
+            </summary>
+            <div class="text-[15px] text-on-surface-variant mt-3.5 pt-3 border-t border-outline-variant/20 leading-relaxed font-light">
+              Sí, contamos con cajones de estacionamiento privado y seguro justo frente a las instalaciones para tu máxima comodidad.
+            </div>
+          </details>
+
+          <details class="bg-surface rounded-xl border border-outline-variant/30 p-5 open:bg-surface-container-low transition-all duration-200 group">
+            <summary class="font-serif-luxury text-[17px] sm:text-[18px] font-medium text-primary cursor-pointer list-none flex justify-between items-center gap-4">
+              <span>¿Puedo regalar un certificado o Gift Card?</span>
+              <span class="material-symbols-outlined text-primary accordion-chevron transition-transform duration-300 shrink-0">expand_more</span>
+            </summary>
+            <div class="text-[15px] text-on-surface-variant mt-3.5 pt-3 border-t border-outline-variant/20 leading-relaxed font-light">
+              ¡Claro que sí! Contamos con elegantes certificados de regalo físicos con sobre dorado y versiones digitales listas para enviar por WhatsApp o email con dedicatoria personalizada.
+            </div>
+          </details>
+
+          <details class="bg-surface rounded-xl border border-outline-variant/30 p-5 open:bg-surface-container-low transition-all duration-200 group">
+            <summary class="font-serif-luxury text-[17px] sm:text-[18px] font-medium text-primary cursor-pointer list-none flex justify-between items-center gap-4">
+              <span>¿Qué ocurre si llego unos minutos tarde a mi sesión?</span>
+              <span class="material-symbols-outlined text-primary accordion-chevron transition-transform duration-300 shrink-0">expand_more</span>
+            </summary>
+            <div class="text-[15px] text-on-surface-variant mt-3.5 pt-3 border-t border-outline-variant/20 leading-relaxed font-light">
+              Ofrecemos 15 minutos de tolerancia. En caso de demoras mayores, la sesión podrá ajustarse al tiempo restante para no afectar la agenda de los clientes siguientes.
+            </div>
+          </details>
+
+          <details class="bg-surface rounded-xl border border-outline-variant/30 p-5 open:bg-surface-container-low transition-all duration-200 group">
+            <summary class="font-serif-luxury text-[17px] sm:text-[18px] font-medium text-primary cursor-pointer list-none flex justify-between items-center gap-4">
+              <span>¿Tienen paquetes especiales para novias o aniversarios?</span>
+              <span class="material-symbols-outlined text-primary accordion-chevron transition-transform duration-300 shrink-0">expand_more</span>
+            </summary>
+            <div class="text-[15px] text-on-surface-variant mt-3.5 pt-3 border-t border-outline-variant/20 leading-relaxed font-light">
+              Sí, diseñamos rituales personalizados para novias (Bridal Spa Day), paquetes en pareja y días de spa para grupos pequeños con copa de cortesía y amenidades especiales.
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 7. RESERVATION & CONTACT SECTION                                          -->
+    <!-- ========================================================================= -->
+    <section class="py-20 lg:py-28 bg-surface-container-low border-t border-outline-variant/20" id="contacto">
+      <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+        
+        <div class="text-center mb-14 fade-in-up visible">
+          <span class="text-[12px] font-bold tracking-widest uppercase text-tertiary">Agenda tu cita</span>
+          <h2 class="font-serif-luxury text-[32px] sm:text-[40px] text-primary mt-2 mb-4 font-semibold">
+            Reserva tu momento
+          </h2>
+          <div class="h-0.5 w-24 bg-tertiary-fixed-dim mx-auto rounded-full"></div>
+          <p class="text-on-surface-variant text-[16px] max-w-xl mx-auto mt-4 font-light">
+            Completa el formulario y te confirmaremos disponibilidad al instante por WhatsApp o correo.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 bg-surface-container-lowest rounded-3xl shadow-glass border border-outline-variant/20 overflow-hidden">
+          
+          <!-- Contact & Booking Form (7 Cols) -->
+          <div class="p-8 sm:p-12 lg:col-span-7 fade-in-up visible">
+            <form id="booking-form" class="flex flex-col gap-6" onsubmit="handleFormSubmit(event)">
+              
+              <!-- Full Name -->
+              <div>
+                <label class="text-[12px] font-bold text-on-surface uppercase tracking-wider block mb-2" for="name">
+                  Nombre completo <span class="text-primary">*</span>
+                </label>
+                <input required class="w-full bg-white border-0 border-b-2 border-outline-variant/50 text-on-surface px-3 py-3 text-[15px] focus:ring-0 focus:border-primary transition-colors rounded-t-lg" id="name" type="text" placeholder="Ej. María Elena González">
+              </div>
+
+              <!-- Email & Phone Grid -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <label class="text-[12px] font-bold text-on-surface uppercase tracking-wider block mb-2" for="email">
+                    Correo electrónico <span class="text-primary">*</span>
+                  </label>
+                  <input required class="w-full bg-white border-0 border-b-2 border-outline-variant/50 text-on-surface px-3 py-3 text-[15px] focus:ring-0 focus:border-primary transition-colors rounded-t-lg" id="email" type="email" placeholder="ejemplo@correo.com">
+                </div>
+                <div>
+                  <label class="text-[12px] font-bold text-on-surface uppercase tracking-wider block mb-2" for="phone">
+                    Teléfono (WhatsApp) <span class="text-primary">*</span>
+                  </label>
+                  <input required class="w-full bg-white border-0 border-b-2 border-outline-variant/50 text-on-surface px-3 py-3 text-[15px] focus:ring-0 focus:border-primary transition-colors rounded-t-lg" id="phone" type="tel" placeholder="(871) 743-8686">
+                </div>
+              </div>
+
+              <!-- Service Selection -->
+              <div>
+                <label class="text-[12px] font-bold text-on-surface uppercase tracking-wider block mb-2" for="service">
+                  Servicio de interés <span class="text-primary">*</span>
+                </label>
+                <select required class="w-full bg-white border-0 border-b-2 border-outline-variant/50 text-on-surface px-3 py-3 text-[15px] focus:ring-0 focus:border-primary transition-colors cursor-pointer rounded-t-lg" id="service">
+                  <option value="" disabled selected>Selecciona un tratamiento...</option>
+                  <option value="masajes">Masajes Relajantes y Terapéuticos (60-90 min)</option>
+                  <option value="faciales">Tratamientos Faciales & Limpieza Profunda</option>
+                  <option value="hidrocolonoscopia">Hidrocolonoscopia (Higiene Intestinal)</option>
+                  <option value="enzimas">Enzimas Reductoras & Reafirmantes</option>
+                  <option value="gimnasia">Gimnasia Pasiva (Electroestimulación)</option>
+                  <option value="mesoterapia">Mesoterapia Corporal y Facial</option>
+                  <option value="cavitacion">Cavitación Ultrasónica</option>
+                  <option value="radiofrecuencia">Radiofrecuencia Tensora</option>
+                  <option value="paquetes">Paquetes Personalizados / Spa Day</option>
+                </select>
+              </div>
+
+              <!-- Preferred Date & Time Preference -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <label class="text-[12px] font-bold text-on-surface uppercase tracking-wider block mb-2" for="date">
+                    Fecha deseada
+                  </label>
+                  <input class="w-full bg-white border-0 border-b-2 border-outline-variant/50 text-on-surface px-3 py-3 text-[15px] focus:ring-0 focus:border-primary transition-colors rounded-t-lg" id="date" type="date">
+                </div>
+                <div>
+                  <label class="text-[12px] font-bold text-on-surface uppercase tracking-wider block mb-2" for="schedule">
+                    Horario preferido
+                  </label>
+                  <select class="w-full bg-white border-0 border-b-2 border-outline-variant/50 text-on-surface px-3 py-3 text-[15px] focus:ring-0 focus:border-primary transition-colors cursor-pointer rounded-t-lg" id="schedule">
+                    <option value="manana">Mañana (9:00 AM - 1:00 PM)</option>
+                    <option value="tarde" selected>Tarde (2:00 PM - 7:00 PM)</option>
+                    <option value="sabado">Sábado (10:00 AM - 4:00 PM)</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Message -->
+              <div>
+                <label class="text-[12px] font-bold text-on-surface uppercase tracking-wider block mb-2" for="message">
+                  Mensaje o requerimiento especial (Opcional)
+                </label>
+                <textarea class="w-full bg-white border-0 border-b-2 border-outline-variant/50 text-on-surface px-3 py-3 text-[15px] focus:ring-0 focus:border-primary transition-colors resize-none rounded-t-lg" id="message" rows="3" placeholder="¿Tienes alguna preferencia, molestia específica o duda?"></textarea>
+              </div>
+
+              <!-- Submit Buttons -->
+              <div class="flex flex-col sm:flex-row gap-4 mt-3">
+                <button type="submit" id="submit-btn" class="flex-1 bg-primary text-on-primary text-[13px] font-bold uppercase tracking-wider py-4 px-8 rounded-full hover:bg-primary-hover transition-all duration-300 shadow-orchid-glow hover:shadow-lg flex items-center justify-center gap-2">
+                  <span class="material-symbols-outlined text-[18px]">send</span>
+                  Enviar solicitud de reserva
+                </button>
+                <button type="button" onclick="sendViaWhatsAppDirect()" class="sm:w-auto bg-[#25D366] hover:bg-[#1EBE5D] text-white text-[13px] font-bold uppercase tracking-wider py-4 px-6 rounded-full transition-all duration-300 shadow-md flex items-center justify-center gap-2">
+                  <span class="material-symbols-outlined text-[18px]">chat</span>
+                  WhatsApp directo
+                </button>
+              </div>
+
+            </form>
+          </div>
+
+          <!-- Location Info & Map Card (5 Cols) -->
+          <div class="lg:col-span-5 bg-surface-container-high relative flex flex-col justify-between p-8 sm:p-10 border-t lg:border-t-0 lg:border-l border-outline-variant/20">
+            
+            <div>
+              <div class="flex items-center gap-2 text-primary mb-3">
+                <span class="material-symbols-outlined text-[24px]">location_on</span>
+                <span class="font-serif-luxury text-[22px] font-semibold">Visítanos en Torreón</span>
+              </div>
+              <p class="text-[14px] text-on-surface-variant mb-6 leading-relaxed">
+                Estamos ubicados en Plaza TGS, Ampliación Senderos, Torreón. Contamos con instalaciones privadas, atmósfera relajante y estacionamiento exclusivo para tu comodidad.
+              </p>
+
+              <!-- Quick Info Cards -->
+              <div class="space-y-4 mb-6">
+                <div class="flex items-start gap-3 bg-white/80 p-3.5 rounded-xl border border-outline-variant/20">
+                  <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">pin_drop</span>
+                  <div>
+                    <strong class="text-[13px] block text-on-surface">Dirección</strong>
+                    <span class="text-[13px] text-on-surface-variant leading-relaxed block">Carr. Torreón - San Pedro De las Colonias 6250-Local 2, Ampliación Senderos, Plaza TGS, C.P. 27410 Torreón, Coah.</span>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3 bg-white/80 p-3.5 rounded-xl border border-outline-variant/20">
+                  <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">schedule</span>
+                  <div>
+                    <strong class="text-[13px] block text-on-surface">Horarios de Atención</strong>
+                    <span class="text-[13px] text-on-surface-variant">Lun - Vie: 9:00 AM - 7:30 PM<br>Sábados: 10:00 AM - 4:00 PM</span>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3 bg-white/80 p-3.5 rounded-xl border border-outline-variant/20">
+                  <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">phone_in_talk</span>
+                  <div>
+                    <strong class="text-[13px] block text-on-surface">Teléfono / WhatsApp</strong>
+                    <a href="https://wa.me/528717438686" target="_blank" rel="noopener" class="text-[13px] text-primary font-bold hover:underline block">(871) 743-8686</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stylized Map Preview -->
+            <div class="rounded-2xl overflow-hidden shadow-sm border border-outline-variant/30 relative h-48 sm:h-56 mt-4">
+              <img class="w-full h-full object-cover" alt="Mapa de ubicación en Torreón, Coahuila" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArE6BM9B7AFO7ub_X9tyM_gcM6UiGN8Z4w9cR22XMzOZKfeF_glepxGtP2n5rFYevmDtHWnVMII7YCq2gCTrHEyiag6KQnx_C9hde8hsuwS4ic_Lu_bwW17a7NRp7AsGhlPRAONUv7uoYzNwzsbCaOYhx5AFAZW6K42prmanIOYz6wZkdV4AjBfNkRY9bZJYBQWar7PWrsYX38AG4WTs-XxuJd0wvnd_FnTyAHUtovI7rV8ukAOvDY">
+              <div class="absolute inset-0 bg-primary/10 pointer-events-none"></div>
+              <div class="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-sm px-3.5 py-2 rounded-xl shadow border border-outline-variant/20 flex items-center justify-between">
+                <span class="text-[12px] font-bold text-primary">Annie Natural Beauty • Plaza TGS</span>
+                <a href="https://www.google.com/maps/search/?api=1&query=Carr.+Torre%C3%B3n+-+San+Pedro+De+las+Colonias+6250-Local+2%2C+Ampliacion+Senderos%2C+plaza+TGS%2C+27410+Torre%C3%B3n%2C+Coah." target="_blank" rel="noopener" class="text-[11px] uppercase font-bold text-primary underline">Abrir mapa</a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- 8. FOOTER                                                                 -->
+  <!-- ========================================================================= -->
+  <footer class="bg-surface-container text-primary w-full py-16 border-t border-outline-variant/30">
+    <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+        
+        <!-- Brand Column -->
+        <div class="flex flex-col gap-4">
+          <div class="flex items-center gap-2.5">
+            <span class="material-symbols-outlined text-[30px]">spa</span>
+            <span class="font-serif-luxury text-[24px] font-semibold">Annie Natural Beauty</span>
+          </div>
+          <p class="text-[14px] text-on-surface-variant leading-relaxed">
+            Tu santuario de paz en Torreón. Cuidado holístico y tecnología estética avanzada para nutrir tu equilibrio y vitalidad.
+          </p>
+        </div>
+
+        <!-- Links Column: Explorar -->
+        <div class="flex flex-col gap-3">
+          <h4 class="text-[12px] font-bold uppercase tracking-widest text-primary mb-1">Explorar</h4>
+          <a class="text-[14px] text-on-surface-variant hover:text-primary transition-colors" href="#inicio">Inicio</a>
+          <a class="text-[14px] text-on-surface-variant hover:text-primary transition-colors" href="#tratamientos">Tratamientos</a>
+          <a class="text-[14px] text-on-surface-variant hover:text-primary transition-colors" href="#nosotros">Sobre Nosotros</a>
+          <a class="text-[14px] text-on-surface-variant hover:text-primary transition-colors" href="#faq">Preguntas Frecuentes</a>
+        </div>
+
+        <!-- Links Column: Servicios Destacados -->
+        <div class="flex flex-col gap-3">
+          <h4 class="text-[12px] font-bold uppercase tracking-widest text-primary mb-1">Servicios</h4>
+          <a class="text-[14px] text-on-surface-variant hover:text-primary transition-colors" href="#tratamientos">Masajes Relajantes</a>
+          <a class="text-[14px] text-on-surface-variant hover:text-primary transition-colors" href="#tratamientos">Faciales y Limpieza</a>
+          <a class="text-[14px] text-on-surface-variant hover:text-primary transition-colors" href="#tratamientos">Hidrocolonoscopia</a>
+          <a class="text-[14px] text-on-surface-variant hover:text-primary transition-colors" href="#tratamientos">Cavitación & Radiofrecuencia</a>
+        </div>
+
+        <!-- Social & Contact Column -->
+        <div class="flex flex-col gap-3">
+          <h4 class="text-[12px] font-bold uppercase tracking-widest text-primary mb-1">Conecta con nosotros</h4>
+          <p class="text-[13px] text-on-surface-variant">Síguenos en redes sociales para promociones y tips de bienestar.</p>
+          <div class="flex gap-4 mt-2">
+            <!-- Instagram -->
+            <a aria-label="Instagram" class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all shadow-sm" href="https://instagram.com" target="_blank" rel="noopener">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+            <!-- Facebook -->
+            <a aria-label="Facebook" class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all shadow-sm" href="https://facebook.com" target="_blank" rel="noopener">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Copyright & Legal -->
+      <div class="mt-12 pt-6 border-t border-outline-variant/20 flex flex-col sm:flex-row items-center justify-between gap-4 text-[13px] text-on-surface-variant/80">
+        <p>© 2026 Annie Natural Beauty. Todos los derechos reservados.</p>
+        <div class="flex gap-6 text-[12px]">
+          <a href="#" class="hover:underline">Términos del Servicio</a>
+          <a href="#" class="hover:underline">Aviso de Privacidad</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- 9. FLOATING WHATSAPP BUTTON (FAB)                                         -->
+  <!-- ========================================================================= -->
+  <aside class="fixed bottom-6 right-6 z-50 flex items-center gap-3">
+    <!-- Speech bubble tooltip -->
+    <div id="wa-tooltip" class="hidden sm:flex items-center bg-white text-on-surface px-4 py-2 rounded-full shadow-lg border border-outline-variant/30 text-[13px] font-medium animate-pulse">
+      <span>¿Dudas? ¡Escríbenos!</span>
+    </div>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/528717438686?text=Hola%2C%20quisiera%20pedir%20informaci%C3%B3n%20sobre%20los%20tratamientos%20en%20Annie%20Natural%20Beauty" 
+       target="_blank" 
+       rel="noopener"
+       aria-label="Contactar por WhatsApp a Annie Natural Beauty" 
+       class="bg-[#25D366] hover:bg-[#1EBE5D] text-white p-4 rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 flex items-center justify-center">
+      <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+      </svg>
+    </a>
+  </aside>
+
+  <!-- ========================================================================= -->
+  <!-- 10. INTERACTIVE TREATMENT DETAIL MODAL                                    -->
+  <!-- ========================================================================= -->
+  <div id="treatment-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-on-surface/60 backdrop-blur-sm transition-opacity duration-300">
+    <div class="bg-surface-container-lowest rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-outline-variant/30 flex flex-col transform transition-transform duration-300 scale-95" id="modal-card">
+      
+      <!-- Modal Header -->
+      <div class="relative h-64 overflow-hidden rounded-t-3xl">
+        <img id="modal-image" class="w-full h-full object-cover" src="" alt="Detalle del tratamiento">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+        <button onclick="closeTreatmentModal()" class="absolute top-4 right-4 bg-white/80 hover:bg-white text-on-surface p-2 rounded-full backdrop-blur-md shadow transition-colors" aria-label="Cerrar modal">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+        <div class="absolute bottom-4 left-6 right-6 text-white">
+          <span id="modal-badge" class="bg-primary px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider mb-2 inline-block">Cuerpo</span>
+          <h3 id="modal-title" class="font-serif-luxury text-[24px] sm:text-[28px] font-semibold leading-tight">Título</h3>
+        </div>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-6 sm:p-8 space-y-6">
+        
+        <div>
+          <h4 class="text-[12px] font-bold uppercase tracking-wider text-tertiary mb-2">Descripción del Procedimiento</h4>
+          <p id="modal-description" class="text-[15px] text-on-surface-variant leading-relaxed font-light">Descripción detallada.</p>
+        </div>
+
+        <!-- Meta info pills (Duration, Sessions) -->
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-surface-container-low p-3.5 rounded-2xl border border-outline-variant/20">
+            <span class="text-[11px] font-bold uppercase text-primary block">Duración sugerida</span>
+            <span id="modal-duration" class="font-serif-luxury text-[18px] font-semibold text-on-surface">60 min</span>
+          </div>
+          <div class="bg-surface-container-low p-3.5 rounded-2xl border border-outline-variant/20">
+            <span class="text-[11px] font-bold uppercase text-primary block">Sesiones recomendadas</span>
+            <span id="modal-sessions" class="font-serif-luxury text-[18px] font-semibold text-on-surface">6 - 8 sesiones</span>
+          </div>
+        </div>
+
+        <!-- Benefits checklist -->
+        <div>
+          <h4 class="text-[12px] font-bold uppercase tracking-wider text-tertiary mb-3">Beneficios Principales</h4>
+          <ul id="modal-benefits" class="space-y-2 text-[14px] text-on-surface-variant">
+            <!-- Populated dynamically -->
+          </ul>
+        </div>
+
+        <!-- Action buttons -->
+        <div class="pt-4 border-t border-outline-variant/20 flex flex-col sm:flex-row gap-3">
+          <button id="modal-book-btn" class="flex-1 bg-primary text-white py-3.5 px-6 rounded-full font-bold uppercase text-[13px] tracking-wider hover:bg-primary-hover shadow-md flex items-center justify-center gap-2 transition-all">
+            <span class="material-symbols-outlined text-[18px]">calendar_month</span>
+            Agendar este tratamiento
+          </button>
+          <button onclick="closeTreatmentModal()" class="py-3.5 px-6 rounded-full border border-outline-variant text-on-surface-variant hover:bg-surface-container font-bold uppercase text-[12px] tracking-wider transition-all">
+            Cerrar
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- 11. TOAST CONFIRMATION NOTIFICATION                                       -->
+  <!-- ========================================================================= -->
+  <div id="toast-msg" class="fixed top-24 right-6 z-[120] hidden bg-surface-container-lowest text-on-surface p-4 rounded-2xl shadow-2xl border-2 border-primary/30 max-w-sm flex items-center gap-3.5 transform transition-all duration-300">
+    <div class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0">
+      <span class="material-symbols-outlined text-[24px]">task_alt</span>
+    </div>
+    <div class="flex-1">
+      <h5 class="text-[14px] font-bold text-primary">¡Solicitud recibida!</h5>
+      <p id="toast-text" class="text-[12px] text-on-surface-variant leading-snug">Nos pondremos en contacto contigo en breve para confirmar tu cita.</p>
+    </div>
+    <button onclick="hideToast()" class="text-on-surface-variant hover:text-primary p-1">
+      <span class="material-symbols-outlined text-[18px]">close</span>
+    </button>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- 12. JAVASCRIPT LOGIC                                                      -->
+  <!-- ========================================================================= -->
+  <script>
+    // Treatment catalog data for modal
+    const treatmentData = {
+      masajes: {
+        title: "Masajes Relajantes y Terapéuticos",
+        badge: "Cuerpo",
+        category: "cuerpo",
+        duration: "60 / 90 min",
+        sessions: "1 sesión semanal o quincenal",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBZ_i6Mm5lNmunto1-XBJlKnWk4arSHcl0okJGbMlsN-zhyw_i2MJa5CBLNRVPPOmlB5PN4loCl-hyECQkC92-MG9_wE5XJ1KPzWKjxz64A34RhbXcTZOAyVK_33UQYvgrdPM3TmA0LQyU6IVRgmq8JY8Aau1JpUrFDaBAhTaB8CInVYF46zcimKAJJAn92uvWyF_IZG-fjwYnsoULoBB3iUV9lF3g3YWClVtDMnNeVaaz_qDeLK4P7GDWqYMp3dbvzOm6t-C563OOtrg",
+        description: "Experiencia corporal holística donde se combinan técnicas suecas, descontracturantes y drenaje linfático con aceites esenciales botánicos tibios. Ideal para desvanecer nudos musculares en espalda, cuello y hombros provocados por la rutina.",
+        benefits: [
+          "Alivio instantáneo de contracturas y rigidez muscular",
+          "Disminución de niveles de cortisol y fatiga crónica",
+          "Activación del retorno venoso y drenaje linfático",
+          "Inducción a un sueño profundo y reparador"
+        ]
+      },
+      faciales: {
+        title: "Tratamientos Faciales & Limpieza Profunda",
+        badge: "Rostro",
+        category: "rostro",
+        duration: "60 min",
+        sessions: "1 sesión cada 21 a 30 días",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCkI7SN_PXZwEgSMnLYz5h8SWLFbszWuJysh1qGTEJvYFxAFzNoMZctb_HOJOJGEawzXoeP7Bs066RQiJijAPl2ocBbZM8Q_XNxHedMLfk7jyvjRrn3z65Eg-2BLEBM1NKSxAIHofgIg1bpsxSyKK66fbSlsvWo6KuAa1_KxZWPU68ejejb7DKzhygFpCZWMOAzAKoGGJZqxd6VPTdwJpbWCvbqXOrr2r5yuR0wCoDSG0WD7D59FvFfpawhfpE_ikVKb2Mq_cZJ05jZUA",
+        description: "Protocolo clínico-estético personalizado que incluye vaporización ozonizada, extracción no invasiva de impurezas, exfoliación enzimática, mascarilla hidroplástica rica en péptidos y masaje tensor facial kobido.",
+        benefits: [
+          "Poros visiblemente limpios, afinados y libres de comedones",
+          "Hidratación profunda con efecto glow natural y luminoso",
+          "Estimulación de la microcirculación y firmeza facial",
+          "Atenuación de líneas finas de expresión y signos de cansancio"
+        ]
+      },
+      hidrocolonoscopia: {
+        title: "Hidrocolonoscopia (Hidroterapia de Colon)",
+        badge: "Bienestar",
+        category: "bienestar",
+        duration: "45 min",
+        sessions: "2 a 3 sesiones espaciadas",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCNwTStQgBZgWMJRiPySFHnSjqR6eSEYk9lCW9bD4MkUeGE9mZG2Rb2B7RiXEAfcfG8LHUxj5UhKz2-FdqhQxIqXJstIIxhOoDCDgDyHml6hi_7n7453ZnsCtumSfrtKn4YRGj8XQwKJuK21bKIgqA_pVaOXfS4UBVq22DMW5W7HtjiVqD1NcZP3PLEviRR60N8EUWpiHRes4ZmMEhG_s1F3IUR4gP-uCPJyKmiBd5AXhHXQFdq82TLbfRfcnjx-8DOJwzv_gIdYOrVjw",
+        description: "Terapia higiénica que realiza un lavado suave y completo del intestino grueso utilizando agua pura, filtrada y a temperatura controlada. Ayuda a liberar materia acumulada, disminuyendo la hinchazón abdominal y mejorando la digestión.",
+        benefits: [
+          "Alivio inmediato de la distensión y pesadez estomacal",
+          "Eliminación profunda de toxinas y residuos estancados",
+          "Mejora notable en el tránsito intestinal y asimilación de nutrientes",
+          "Sensación integral de ligereza y revitalización"
+        ]
+      },
+      enzimas: {
+        title: "Enzimas Reductoras & Reafirmantes",
+        badge: "Cuerpo",
+        category: "cuerpo",
+        duration: "45 min",
+        sessions: "4 a 6 sesiones quincenales",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuB1-jMqVKmTpQVHy0Cdoz7Wdq_OctXMX2KkHoisD0pSBUjFyHA6bcKiaoNAuU2dIjoY4O2gbAJxUeVEZTl63hl2Br9Y86xemwnAlHASVZJebLLHpFXneV9BLYWZzYc-PY7FarcYAUPeOh8GEr_NYQdESSy5ZVRKLPtOL2gn6iEX-mOj-h0CwbetcqQsCy6tMbUu-qg8jXvUyg0AmtCJTx8CxsusaFacV68GwRDZZfq_2x6bAls8SEGSZvjmPKXt6xTJb5HCy4XZGExL3A",
+        description: "Combinación de Lipasa, Colagenasa e Hialuronidasa de grado médico que actúa directamente sobre los depósitos de grasa localizada y los nódulos de celulitis, reestructurando el tejido conectivo para una piel lisa.",
+        benefits: [
+          "Reducción efectiva de grasa rebelde en abdomen, flancos y muslos",
+          "Suavizado visible de celulitis y piel de naranja",
+          "Retracción y tensado del tejido dérmico",
+          "Resultados progresivos sin incapacidad médica"
+        ]
+      },
+      gimnasia: {
+        title: "Gimnasia Pasiva (Electroestimulación Rusa)",
+        badge: "Cuerpo",
+        category: "cuerpo",
+        duration: "45 min",
+        sessions: "8 a 12 sesiones (2 por semana)",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBRVp2JNbO5IlTEqffnEjPbPthFq-MD5XOIfDAtiE_KnusJcqRF7PYi-LI3vwDF7oPoRILRZ1xqliyfl8Da_MafbQ0oZoU84UeG6rl0jNDk4pVL2YzSV4b32LE2rWf-Blze0KSPrhw6EAz2Cgb3yntwaDldmtdKeWyoUurt_oVYyS3nv2csdGrLJe5PL3Ibdk05_cZJFopu8m9Nko-mBEkTNAz2BpAVhCiJ6juLn88G4cdTQR1gUfBOsDFUh9OfJE0vAekgP0Q5UnIPaw",
+        description: "Tecnología de electrodos que emite ondas de frecuencia modulada para provocar contracciones musculares rítmicas e intensas, equivalentes a cientos de abdominales o sentadillas, sin esfuerzo articular.",
+        benefits: [
+          "Tonificación y levantamiento de glúteos y abdomen",
+          "Aceleración del metabolismo local y quema calórica",
+          "Estimulación de la circulación y drenaje de líquidos",
+          "Ideal para complementar rutinas de moldeado corporal"
+        ]
+      },
+      mesoterapia: {
+        title: "Mesoterapia Corporal y Facial",
+        badge: "Cuerpo / Rostro",
+        category: "cuerpo",
+        duration: "40 min",
+        sessions: "6 a 8 sesiones semanales",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDMhHSXLRW1iSHdDrBIFF01h8Xj9j9MhN83ylzn8AwRCp1T72ZoFl1-gD4xX7b0rPZ6hzniPDtZ3buDUkAhyQKvRL_Fv2eOXaaSDJZsg7sUEo5tGTTGhlb-OJ21UrzLlwduJuW30ytYPHIRDvFAxl0-KJakLCkmqR8Fz7WA1I8QWrRhfj6ZeyJn5-I7_uoPaxTEMvuKOJeZocLzESHgB_OjARZvZZFCocdTYBnAeFcsmerSwWgwzEDzhyEUeXhHICFwdTiYtK3P30UWBw",
+        description: "Micro-infiltraciones superficiales que administran cócteles enriquecidos con silicio orgánico, alcachofa, carnitina y vitaminas directo en la zona diana, logrando una acción rápida y concentrada.",
+        benefits: [
+          "Aceleración de la lipólisis en zonas rebeldes",
+          "Mayor firmeza y elasticidad cutánea",
+          "Tratamiento altamente focalizado según objetivo",
+          "Efecto revitalizante en calidad de piel"
+        ]
+      },
+      cavitacion: {
+        title: "Cavitación Ultrasónica",
+        badge: "Cuerpo",
+        category: "cuerpo",
+        duration: "50 min",
+        sessions: "6 a 10 sesiones semanales",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAljxaEBsClJFKCMO3VUGwRB_6xkiYAcyptw1u6iPRoXJv_lQ8QVk9g8mk8pFA3CRfk9AycCriujjlqyBb90ouDAqbRDfCfiQkO9P9j_MKDJjwgs-C2NhwqvfUoqmmmHTYOxo9mUvyoikGUbEcMQlKueJCQPpoFyfOc3jCYc_Jayb4sFoNj8MwPSLV8GGDqfGj1Wxol-Dz0jxGEnYCro6Z0ZldiRzoCJHX1lH4z-_HvWQCDxeL-khAQwYCfvJAlHs8g3XKGTWJRXSGbzg",
+        description: "Emisión de ondas ultrasónicas a baja frecuencia que generan microburbujas en el tejido graso. Estas microburbujas rompen la membrana de los adipocitos, licuando la grasa para que el organismo la elimine naturalmente por la vía linfática.",
+        benefits: [
+          "Disminución medible de centímetros desde las primeras sesiones",
+          "Tratamiento indoloro, seguro y 100% no invasivo",
+          "Reducción sustancial de celulitis compacta y blanda",
+          "Modelado de cintura, abdomen, caderas y brazos"
+        ]
+      },
+      radiofrecuencia: {
+        title: "Radiofrecuencia Reafirmante",
+        badge: "Cuerpo / Rostro",
+        category: "cuerpo",
+        duration: "50 min",
+        sessions: "6 a 8 sesiones quincenales",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDaxO59zz1v4TMw_OlWXG7j-7Zt110XICnPZS6tCIKRb5ESxwsp-nclegrwyeQkV-rWsbZoAJoQSqhRREBvMsDQH_xefnACuJjVdlb83uBl9-Cse-Coxi2dD3AVwkOIFJquuGHidgUwM90bfErt11s_KUY3iV0q9_jLfVIUN666xHSMLsGZ33COSQOBjK2PlH2_KKHaG275gXjsv9soWz9fcsadAziitcJx6AJ28xKES-5uGsTPtTFRhbvvF079vDELkN5Yz_toTzA6CA",
+        description: "Transmisión de ondas electromagnéticas que calientan de forma precisa las capas profundas de la dermis. Esto provoca la contracción inmediata de las fibras de colágeno existentes y estimula la síntesis de nuevo colágeno a largo plazo.",
+        benefits: [
+          "Efecto tensor 'lifting' sin cirugía ni inyecciones",
+          "Combate la flacidez postparto y post-pérdida de peso",
+          "Piel más tersa, densa, suave y rejuvenecida",
+          "Atenuación de líneas de expresión y arrugas finas"
+        ]
+      }
+    };
+
+    // DOM Ready Initializer
+    document.addEventListener('DOMContentLoaded', () => {
+      
+      // Mobile Drawer Navigation
+      const menuBtn = document.getElementById('mobile-menu-btn');
+      const closeBtn = document.getElementById('close-drawer-btn');
+      const drawer = document.getElementById('mobile-drawer');
+      const overlay = document.getElementById('drawer-overlay');
+      const drawerLinks = document.querySelectorAll('.drawer-link');
+
+      function openDrawer() {
+        drawer.classList.remove('-translate-x-full');
+        overlay.classList.remove('hidden');
+        setTimeout(() => overlay.classList.remove('opacity-0'), 10);
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeDrawer() {
+        drawer.classList.add('-translate-x-full');
+        overlay.classList.add('opacity-0');
+        setTimeout(() => overlay.classList.add('hidden'), 300);
+        document.body.style.overflow = '';
+      }
+
+      if (menuBtn) menuBtn.addEventListener('click', openDrawer);
+      if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+      if (overlay) overlay.addEventListener('click', closeDrawer);
+      drawerLinks.forEach(link => link.addEventListener('click', closeDrawer));
+
+      // Filter Chips Logic for Treatments
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const serviceCards = document.querySelectorAll('.service-card');
+
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterButtons.forEach(b => {
+            b.classList.remove('bg-primary', 'text-white', 'shadow-sm');
+            b.classList.add('bg-surface-container', 'text-on-surface-variant');
+          });
+          btn.classList.add('bg-primary', 'text-white', 'shadow-sm');
+          btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+
+          const filter = btn.getAttribute('data-filter');
+          serviceCards.forEach(card => {
+            const categories = card.getAttribute('data-category').split(' ');
+            if (filter === 'all' || categories.includes(filter)) {
+              card.style.display = 'flex';
+              setTimeout(() => card.classList.add('visible'), 50);
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // Scroll Fade In Observers
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+
+      // Close modal on Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeTreatmentModal();
+      });
+    });
+
+    // Open Treatment Modal Function
+    function openTreatmentModal(key) {
+      const data = treatmentData[key];
+      if (!data) return;
+
+      document.getElementById('modal-image').src = data.image;
+      document.getElementById('modal-image').alt = data.title;
+      document.getElementById('modal-title').textContent = data.title;
+      document.getElementById('modal-badge').textContent = data.badge;
+      document.getElementById('modal-description').textContent = data.description;
+      document.getElementById('modal-duration').textContent = data.duration;
+      document.getElementById('modal-sessions').textContent = data.sessions;
+
+      // Populate benefits
+      const benefitsList = document.getElementById('modal-benefits');
+      benefitsList.innerHTML = '';
+      data.benefits.forEach(b => {
+        const li = document.createElement('li');
+        li.className = 'flex items-start gap-2.5';
+        li.innerHTML = `<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span> <span>${b}</span>`;
+        benefitsList.appendChild(li);
+      });
+
+      // Set booking CTA target
+      const bookBtn = document.getElementById('modal-book-btn');
+      bookBtn.onclick = () => {
+        closeTreatmentModal();
+        const select = document.getElementById('service');
+        if (select) select.value = key;
+        const contactSection = document.getElementById('contacto');
+        if (contactSection) {
+          contactSection.scrollIntoView({ behavior: 'smooth' });
+          setTimeout(() => {
+            const nameInput = document.getElementById('name');
+            if (nameInput) nameInput.focus();
+          }, 600);
+        }
+      };
+
+      const modal = document.getElementById('treatment-modal');
+      const card = document.getElementById('modal-card');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      setTimeout(() => {
+        card.classList.remove('scale-95');
+        card.classList.add('scale-100');
+      }, 10);
+      document.body.style.overflow = 'hidden';
+    }
+
+    // Close Treatment Modal
+    function closeTreatmentModal() {
+      const modal = document.getElementById('treatment-modal');
+      const card = document.getElementById('modal-card');
+      if (!modal) return;
+      card.classList.remove('scale-100');
+      card.classList.add('scale-95');
+      setTimeout(() => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = '';
+      }, 200);
+    }
+
+    // Form Submission Handler
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const serviceSelect = document.getElementById('service');
+      const serviceName = serviceSelect.options[serviceSelect.selectedIndex]?.text || 'Tratamiento';
+
+      showToast(`¡Gracias ${name}! Hemos recibido tu solicitud para ${serviceName}. Te contactaremos de inmediato.`);
+      document.getElementById('booking-form').reset();
+    }
+
+    // Direct WhatsApp sender with form data
+    function sendViaWhatsAppDirect() {
+      const name = document.getElementById('name').value || 'Cliente';
+      const serviceSelect = document.getElementById('service');
+      const serviceName = serviceSelect.options[serviceSelect.selectedIndex]?.text || 'un tratamiento';
+      const date = document.getElementById('date').value || 'próxima fecha';
+      const schedule = document.getElementById('schedule').value;
+      const message = document.getElementById('message').value;
+
+      let waText = `¡Hola Annie Natural Beauty! Mi nombre es ${name}. Quisiera agendar una cita para: ${serviceName}.`;
+      if (date) waText += ` Fecha estimada: ${date} (${schedule}).`;
+      if (message) waText += ` Mensaje: ${message}`;
+
+      const waUrl = `https://wa.me/528717438686?text=${encodeURIComponent(waText)}`;
+      window.open(waUrl, '_blank');
+    }
+
+    // Toast Helpers
+    function showToast(message) {
+      const toast = document.getElementById('toast-msg');
+      const text = document.getElementById('toast-text');
+      if (!toast || !text) return;
+      text.textContent = message;
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        toast.classList.add('translate-y-0');
+      }, 10);
+
+      setTimeout(hideToast, 6000);
+    }
+
+    function hideToast() {
+      const toast = document.getElementById('toast-msg');
+      if (toast) toast.classList.add('hidden');
+    }
+  </script>
+
+</body>
+</html>
